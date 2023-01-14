@@ -2,7 +2,7 @@
 /*
  * Plugin Name: Continuum(s) Player
  * Description: Lecteur audio et vidéo pour le site Continuum(s)
- * Version: 2014.05.05
+ * Version: 2022.01.14
  * Text Domain: continuums-player
  * @author Luc Poupard
  * @link http://www.kloh.ch
@@ -298,6 +298,9 @@ function continuums_player_script() {
    */
   $page_id = get_queried_object_id();
   $page_object = get_page( $page_id );
+  $shortcode_son = false;
+  $shortcode_video = false;
+
   if ( strpos($page_object->post_content, '[continuums-son') ) {
     $shortcode_son = true;
   }
